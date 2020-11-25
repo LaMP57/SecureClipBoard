@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block main %}
+      <div class="mdui-center" style="max-width: 600px;">
+        <form class="mdui-textfield" action="/result/post" method="post">
+          <label class="mdui-textfield-label">TEXT</label>
+          <textarea class="mdui-textfield-input" rows="8" name="text"></textarea>
+          <br>
+          <select class="mdui-select" name="expiration">
+            <option value="1t">1 time</option>
+            <option value="1h">1 hour</option>
+            <option value="1d">1 day</option>
+            <option value="1w">1 week</option>
+            <option value="1m">1 month</option>
+          </select>
+          <button type="submit" class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-float-right">POST</button>
+        </form>
+        
+        <br>
+      </div>
+{% endblock %}

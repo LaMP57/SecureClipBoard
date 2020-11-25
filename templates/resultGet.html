@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block main %}
+      <div class="mdui-center" style="max-width: 600px;">
+        <div class="mdui-textfield">
+          {% if data['status'] %}
+          <label class="mdui-textfield-label">TEXT</label>
+          <textarea class="mdui-textfield-input" rows="8" name="text" readonly="">{{ data['text'] }}</textarea>
+          {% if data['isOneTime'] %}
+          <p>这是一次性分享，SC-KEY 现已失效</p>
+          {% else %}
+          <p>这是第 {{ data['readTimes'] }} 次查看，SC-KEY 有效期剩余 {{ data['ttl']|formatdatetime }}</p>
+          {% endif %}
+          {% else %}
+          <p>Not Found</p>
+          {% endif %}
+        </div>
+        <br>
+      </div>
+{% endblock %}

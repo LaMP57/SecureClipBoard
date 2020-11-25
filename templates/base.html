@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <title>Secure ClipBoard</title>
+    <link rel="shortcut icon" href="../static/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
+  </head>
+  <body class="mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-pink mdui-loaded ext-webkit ext-chrome" id="syno-nsc-ext-gen3">
+    <header class="mdui-appbar mdui-appbar-fixed">
+      <div class="mdui-toolbar mdui-color-theme">
+        <a href="/" class="mdui-typo-headline mdui-center">Secure ClipBoard <span style="font-size: 12px">Beta</span></a>
+      </div>
+    </header>
+    
+    <div class="mdui-drawer" id="main-drawer">
+      <div class="mdui-list" mdui-collapse="{accordion: true}" style="margin-bottom: 76px;">
+        <div class="mdui-collapse-item ">
+          <a href="/"><div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">add_circle</i>
+            <div class="mdui-list-item-content">POST</div>
+          </div></a>
+          <a href="/get"><div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-deep-orange">file_download</i>
+            <div class="mdui-list-item-content">GET</div>
+          </div></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mdui-container doc-container mdui-center">
+      {% block main %}{% endblock %}
+    </div>
+    <footer style="position: absolute;bottom:0;width:100%;">
+      <p style="text-align: center; color: #7b7b7b !important; font-size: 12px;">本站SSL证书由 <a href="https://www.sslhello.com" target="_blank" style="text-decoration: none; color: #6b6b6b;">SSL HELLO</a> 提供</p>
+    </footer>
+  </body>
+</html>

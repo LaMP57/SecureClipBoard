@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block main %}
+      <div class="mdui-center" style="max-width: 600px;">
+        <div class="mdui-textfield">
+          <label class="mdui-textfield-label">SC-KEY</label>
+          <input class="mdui-textfield-input" type="text" value="{{ scKey }}" readonly="" />
+          <label class="mdui-textfield-label">Share URL</label>
+          <textarea class="mdui-textfield-input" name="text" readonly="">https://scb.catbox.xyz/get?sc={{ scKey }}</textarea>
+		    </div>
+        <br>
+      </div>
+{% endblock %}

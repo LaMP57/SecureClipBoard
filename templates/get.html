@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block main %}
+      <div class="mdui-center" style="max-width: 600px;">
+        <form class="mdui-textfield" action="/result/get" method="post">
+          <label class="mdui-textfield-label">SC-KEY</label>
+          <input class="mdui-textfield-input" type="text" name="sc" value="{{ scKey }}"/>
+          <br>
+          <button type="submit" class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-float-right">GET</button>
+        </form>
+        
+        <br>
+      </div>
+{% endblock %}
