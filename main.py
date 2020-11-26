@@ -32,8 +32,10 @@ def pageResultPost():
         exTime = 3600
     elif expiration == '1d':
         exTime = 86400
-    else:
+    elif expiration == '1w':
         exTime = 604800
+    else:
+        exTime = 1592000
     if expiration == '1t':
         isOneTime = True
     else:
